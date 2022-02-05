@@ -1,7 +1,7 @@
 {
   "name": "right-click-save",
-  "description": "",
-  "version": "1.0",
+  "description": "Stores base64 encoded string for up to 10 svg elements on the page where it's executed",
+  "version": "0.0.1",
   "manifest_version": 3,
   "content_scripts": [
     {
