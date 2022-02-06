@@ -1,33 +1,10 @@
+import { setItem } from '../../packages/local-storage/src/set-item';
+
 /**
  * Constants
  */
 const LOCAL_STORAGE_BOUDNS = 10;
 const LOCAL_STORAGE_KEY = 'RIGHT_CLICK_SAVE_STORAGE_KEY';
-
-/**
- * Add item to local storage array with upper bounds
- */
-function addItem({ key, value, bound }) {
-  const cur = localStorage.getItem(key);
-  const current = JSON.parse(cur);
-  if(Array.isArray(current)) {
-    if(current.length < bound) {
-      current.push(value);
-    } else {
-      const spliceLen = current.length - bound;
-      if(spliceLen > 0) {
-        current.splice(0, spliceLen);
-        current.push(value);
-      } else {  
-        throw new Error(`spliceLen ${spliceLen} > ${bound}`);
-      }
-    }
-  } else {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([]));
-  }
-  const resultToAdd = JSON.stringify(current);
-  localStorage.setItem(key, resultToAdd);
-}
 
 /**
  * Convert svg DOM Node to base64 string
@@ -78,10 +55,13 @@ function findImageVectors() {
 /**
  * Main
  */
-const storeValue = (value) => addItem({ 
+const storeValue = (value) => setItem({ 
   key: LOCAL_STORAGE_KEY,
   bound: LOCAL_STORAGE_BOUDNS,
   value,
+  options: {
+    initArray: []
+  }
 });
 
 try {

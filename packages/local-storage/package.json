@@ -1,0 +1,10 @@
+{
+  "name": "@right-click-save/local-storage",
+  "version": "0.0.1",
+  "description": "quality of life wrappers around window.localStorage",
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "author": "Alek Anwar Merani",
+  "license": "MIT"
+}

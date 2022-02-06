@@ -6,9 +6,17 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": [
-        "main.js"
-      ]
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/*",
+        "node_modules/**/*"
+      ],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": true
     }
   ]
 }

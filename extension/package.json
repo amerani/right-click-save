@@ -1,0 +1,14 @@
+{
+  "name": "@right-click-save/extensions",
+  "version": "0.0.0",
+  "description": "",
+  "main": "content-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@right-click-save/local-storage": "file:../packages/local-storage"
+  },
+  "author": "",
+  "license": "ISC"
+}

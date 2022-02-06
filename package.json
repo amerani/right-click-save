@@ -1,0 +1,19 @@
+{
+  "name": "right-click-save",
+  "version": "0.0.1",
+  "description": "A chrome extension that stores base64 encoded string for up to 10 svg elements on the page where it's executed",
+  "main": "index.js",
+  "scripts": {
+    "build:extension": "./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amerani/right-click-save.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amerani/right-click-save/issues"
+  },
+  "homepage": "https://github.com/amerani/right-click-save#readme"
+}
